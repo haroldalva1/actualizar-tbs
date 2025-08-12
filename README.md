@@ -2,18 +2,16 @@
 
 # Eliminar contenido del directorio tbsdrivers
 rm -r tbsdrivers/*
-check_error "No se pudo eliminar el contenido de tbsdrivers"
 
 # Actualizar el sistema
 sudo apt-get update
-check_error "Fallo en apt-get update"
+
 
 sudo apt-get full-upgrade -y
-check_error "Fallo en apt-get full-upgrade"
 
 # Cambiar al directorio tbsdrivers
 cd tbsdrivers/
-check_error "No se pudo cambiar al directorio tbsdrivers"
+
 
 # Clonar repositorios
 git clone https://github.com/tbsdtv/media_build.git
