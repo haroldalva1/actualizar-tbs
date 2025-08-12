@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Función para verificar si un comando se ejecutó correctamente
-check_error() {
-    if [ $? -ne 0 ]; then
-        echo "Error: $1"
-        exit 1
-    fi
-}
-
 # Eliminar contenido del directorio tbsdrivers
 rm -r tbsdrivers/*
 check_error "No se pudo eliminar el contenido de tbsdrivers"
